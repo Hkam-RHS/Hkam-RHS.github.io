@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="script-v5.js"></script>
+    <script type="text/javascript" src="webcam.min.js"></script>
+    <script src="konami.js"></script>
+    <title>Hotel Kam</title>
+</head>
+
+<body>
+    <div class="container">
+    <!--ROOM 1-->
+    <div id="room1">
+        <span class="roomNumber">Room 1</span>
+        <br>
+        <h2 id="fullRoom1"></h2>
+        <p id="guest1Label">Guest Name</p>
+        <input type="text" id="roomOneGuest" onkeypress="add1(event)">
+        <br>
+        <p id="remove1">Click guest to remove:</p>
+        <ol id="r1List"></ol>
+        <button onclick="remove1All();">Clear Room</button>
+        <!--Button takes picture-->
+        <input type=button value="Take Snapshot" onClick="take_snapshot()">
+        <!-- Code to handle taking the snapshot and displaying it locally -->
+        <script language="JavaScript">
+        function take_snapshot() {
+            // take snapshot and get image data
+            Webcam.snap(function(data_uri) {
+                // display results in page
+                document.getElementById('results').innerHTML =
+                    '<h2>Here is your image:</h2>' +
+                    '<img src="' + data_uri + '"/>';
+            });
+        }
+        </script>
+        <div id="my_camera"></div>
+        <div id="results">Your captured image will appear here...</div>
+        <!--Set WebCam-->
+        <script language="JavaScript">
+        Webcam.set({
+            width: 200,
+            height: 200,
+            image_format: 'jpeg',
+            jpeg_quality: 90
+        });
+        Webcam.attach('#my_camera');
+        </script>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!--ROOM 2-->
+        <div id="room2">
+            <span class="roomNumber">Room 2</span>
+            <br>
+            <h2 id="fullRoom2"></h2>
+            <p id="guest2Label">Guest Name</p>
+            <input type="text" id="roomTwoGuest" onkeypress="add2(event)">
+            <br>
+            <p id="remove2">Click guest to remove:</p>
+            <ol id="r2List"></ol>
+            <button onclick="remove2All();">Clear Room</button>
+        </div>
+        <!--ROOM 3-->
+        <div id="room3">
+            <span class="roomNumber">Room 3</span>
+            <br>
+            <h2 id="fullRoom3"></h2>
+            <p id="guest3Label">Guest Name</p>
+            <input type="text" id="roomThreeGuest" onkeypress="add3(event)">
+            <br>
+            <p id="remove3">Click guest to remove:</p>
+            <ol id="r3List"></ol>
+            <button onclick="remove3All();">Clear Room</button>
+        </div>
+        <!--ROOM 4-->
+        <div id="room4">
+            <span class="roomNumber">Room 4</span>
+            <br>
+            <h2 id="fullRoom4"></h2>
+            <p id="guest4Label">Guest Name</p>
+            <input type="text" id="roomFourGuest" onkeypress="add4(event)">
+            <br>
+            <p id="remove4">Click guest to remove:</p>
+            <ol id="r4List"></ol>
+            <button onclick="remove4All();">Clear Room</button>
+        </div>
+        <!--ROOM 5-->
+        <div id="room5">
+            <span class="roomNumber">Room 5</span>
+            <br>
+            <h2 id="fullRoom5"></h2>
+            <p id="guest5Label">Guest Name</p>
+            <input type="text" id="roomFiveGuest" onkeypress="add5(event)">
+            <br>
+            <p id="remove5">Click guest to remove:</p>
+            <ol id="r5List"></ol>
+            <button onclick="remove5All();">Clear Room</button>
+        </div>
+    </div>
+    <div id="footerLogo">
+        <img src="logoTrans2a.png" height="100%">
+    </div>
+</body>
+
+</html>
