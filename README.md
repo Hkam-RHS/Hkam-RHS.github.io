@@ -1,7 +1,9 @@
 # Demo of JavaScript Webcam.
 
 
-[Load Basic Demo](https://hkam-rhs.github.io/basic.html)
+[Load basic Demo](https://hkam-rhs.github.io/demos/basic.html)
+
+[Load large Demo](https://hkam-rhs.github.io/demos/large.html)
 
 ## Troubleshooting
 
