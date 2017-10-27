@@ -23,10 +23,10 @@
             <br>
             <p id="remove1">Click guest to remove:</p>
             <ol id="r1List"></ol>
-            <button onclick="remove1All();">Clear Room</button>
             <!--Button takes picture-->
-            <input type="button" value="Access Camera" onClick="setup1(); $(this).next().show();">
-            <input type=button value="Take Snapshot" onClick="take_snapshot1()" style="display:none" id="snapButton1">
+            <br>
+            <input type="button" value="Camera On" onClick="setup1(); $(this).next().show();" id="snapButton1">
+            <input type=button value="Take Photo" onClick="take_snapshot1()" style="display:none" id="snapButton1">
             <!-- Code to handle taking the snapshot and displaying it locally -->
             <script language="JavaScript">
             function setup1() {
@@ -34,7 +34,7 @@
             }
 
             function take_snapshot1() {
-                // take snapshot and get image data
+                // Take Photo and get image data
                 Webcam.snap(function(data_uri) {
                     // display results in page
                     document.getElementById('room1photo').innerHTML = '<img src="' + data_uri + '"/>';
@@ -45,8 +45,8 @@
             <div id="room1cam"></div>
             <p>Photo of primary guest. Person is responsible until all guests are cleared.</p>
             <div id="room1photo"></div>
-         
-           
+            <br>
+            <button onclick="remove1All();">Clear Room</button>
         </div>
         <!--ROOM 2-->
         <div id="room2">
@@ -58,18 +58,18 @@
             <br>
             <p id="remove2">Click guest to remove:</p>
             <ol id="r2List"></ol>
-            <button onclick="remove2All();">Clear Room</button>
             <!--Button takes picture-->
-            <input type="button" value="Access Camera" onClick="setup2(); $(this).next().show();">
-            <input type=button value="Take Snapshot" onClick="take_snapshot2()" style="display:none" id="snapButton2">
-           <!-- Code to handle taking the snapshot and displaying it locally -->
+            <br>
+            <input type="button" value="Camera On" onClick="setup2(); $(this).next().show();" id="snapButton2">
+            <input type=button value="Take Photo" onClick="take_snapshot2()" style="display:none" id="snapButton2">
+            <!-- Code to handle taking the snapshot and displaying it locally -->
             <script language="JavaScript">
             function setup2() {
                 Webcam.attach('#room2photo');
             }
 
             function take_snapshot2() {
-                // take snapshot and get image data
+                // Take Photo and get image data
                 Webcam.snap(function(data_uri) {
                     // display results in page
                     document.getElementById('room2photo').innerHTML = '<img src="' + data_uri + '"/>';
@@ -80,7 +80,8 @@
             <div id="room2cam"></div>
             <p>Photo of primary guest. Person is responsible until all guests are cleared.</p>
             <div id="room2photo"></div>
-
+            <br>
+            <button onclick="remove2All();">Clear Room</button>
         </div>
         <!--ROOM 3-->
         <div id="room3">
@@ -92,10 +93,10 @@
             <br>
             <p id="remove3">Click guest to remove:</p>
             <ol id="r3List"></ol>
-            <button onclick="remove3All();">Clear Room</button>
             <!--Button takes picture-->
-            <input type="button" value="Access Camera" onClick="setup3(); $(this).next().show();">
-            <input type=button value="Take Snapshot" onClick="take_snapshot3()" style="display:none" id="snapButton3">
+            <br>
+            <input type="button" value="Camera On" onClick="setup3(); $(this).next().show();" id="snapButton3">
+            <input type=button value="Take Photo" onClick="take_snapshot3()" style="display:none" id="snapButton3">
             <!-- Code to handle taking the snapshot and displaying it locally -->
             <script language="JavaScript">
             function setup3() {
@@ -103,7 +104,7 @@
             }
 
             function take_snapshot3() {
-                // take snapshot and get image data
+                // Take Photo and get image data
                 Webcam.snap(function(data_uri) {
                     // display results in page
                     document.getElementById('room3photo').innerHTML = '<img src="' + data_uri + '"/>';
@@ -114,7 +115,8 @@
             <div id="room3cam"></div>
             <p>Photo of primary guest. Person is responsible until all guests are cleared.</p>
             <div id="room3photo"></div>
-
+            <br>
+            <button onclick="remove3All();">Clear Room</button>
         </div>
         <!--ROOM 4-->
         <div id="room4">
@@ -126,10 +128,10 @@
             <br>
             <p id="remove4">Click guest to remove:</p>
             <ol id="r4List"></ol>
-            <button onclick="remove4All();">Clear Room</button>
             <!--Button takes picture-->
-            <input type="button" value="Access Camera" onClick="setup4(); $(this).next().show();">
-            <input type=button value="Take Snapshot" onClick="take_snapshot4()" style="display:none" id="snapButton4">
+            <br>
+            <input type="button" value="Camera On" onClick="setup4(); $(this).next().show();" id="snapButton4">
+            <input type=button value="Take Photo" onClick="take_snapshot4()" style="display:none" id="snapButton4">
             <!-- Code to handle taking the snapshot and displaying it locally -->
             <script language="JavaScript">
             function setup4() {
@@ -137,7 +139,7 @@
             }
 
             function take_snapshot4() {
-                // take snapshot and get image data
+                // Take Photo and get image data
                 Webcam.snap(function(data_uri) {
                     // display results in page
                     document.getElementById('room4photo').innerHTML = '<img src="' + data_uri + '"/>';
@@ -148,8 +150,8 @@
             <div id="room4cam"></div>
             <p>Photo of primary guest. Person is responsible until all guests are cleared.</p>
             <div id="room4photo"></div>
-      
-
+            <br>
+            <button onclick="remove4All();">Clear Room</button>
         </div>
         <!--ROOM 5-->
         <div id="room5">
@@ -161,10 +163,10 @@
             <br>
             <p id="remove5">Click guest to remove:</p>
             <ol id="r5List"></ol>
-            <button onclick="remove5All();">Clear Room</button>
             <!--Button takes picture-->
-            <input type="button" value="Access Camera" onClick="setup5(); $(this).next().show();">
-            <input type=button value="Take Snapshot" onClick="take_snapshot5()" style="display:none" id="snapButton5">
+            <br>
+            <input type="button" value="Camera On" onClick="setup5(); $(this).next().show();" id="snapButton5">
+            <input type=button value="Take Photo" onClick="take_snapshot5()" style="display:none" id="snapButton5">
             <!-- Code to handle taking the snapshot and displaying it locally -->
             <script language="JavaScript">
             function setup5() {
@@ -172,7 +174,7 @@
             }
 
             function take_snapshot5() {
-                // take snapshot and get image data
+                // Take Photo and get image data
                 Webcam.snap(function(data_uri) {
                     // display results in page
                     document.getElementById('room5photo').innerHTML = '<img src="' + data_uri + '"/>';
@@ -184,18 +186,19 @@
             <div id="room5cam"></div>
             <p>Photo of primary guest. Person is responsible until all guests are cleared.</p>
             <div id="room5photo"></div>
-            
+            <br>
+            <button onclick="remove5All();">Clear Room</button>
         </div>
     </div>
     <!--Set WebCam for all rooms-->
-            <script language="JavaScript">
-                Webcam.set({
-            width: 160,
-            height: 120,
-            image_format: 'jpeg',
-            jpeg_quality: 100
-        });
-            </script>
+    <script language="JavaScript">
+    Webcam.set({
+        width: 160,
+        height: 120,
+        image_format: 'jpeg',
+        jpeg_quality: 100
+    });
+    </script>
 </body>
 
 </html>

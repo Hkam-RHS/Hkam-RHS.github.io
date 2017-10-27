@@ -1,85 +1,87 @@
 <!doctype html>
-
 <html lang="en">
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>WebcamJS Test Page</title>
-	<style type="text/css">
-		body { font-family: Helvetica, sans-serif; }
-		h2, h3 { margin-top:0; }
-		form { margin-top: 15px; }
-		form > input { margin-right: 15px; }
-		#results { float:right; margin:20px; padding:20px; border:1px solid; background:#ccc; }
-	</style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>HD Capture</title>
+    <style type="text/css">
+    body {
+        font-family: Helvetica, sans-serif;
+    }
+
+    h2,
+    h3 {
+        margin-top: 0;
+    }
+
+    form {
+        margin-top: 15px;
+    }
+
+    form>input {
+        margin-right: 15px;
+    }
+
+    #results {
+    	bottom: 0px;
+    	left:0px;
+        border: 1px solid;
+        background: #ccc;
+        position: absolute;
+        z-index: -2;
+    }
+    #overlay {
+    	    	bottom: 0px;
+    	left:0px;
+    	position: absolute;
+    	font-size: 50px;
+    	color: red;
+    	z-index: 3;
+    }
+    </style>
 </head>
+
 <body>
-	<div id="results1">Your captured image will appear here...</div>
-	<div id="results2">Your captured image will appear here...</div>
-	
-	<h1>WebcamJS Test Page</h1>
-	<h3>Demonstrates setting up camera after a click.</h3>
-	
-	<div id="my_camera1"></div>
-	<div id="my_camera2"></div>
-	
-	<!-- First, include the Webcam.js JavaScript Library -->
-	<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="webcam.min.js"></script>
-	
-	<!-- Configure a few settings and attach camera -->
-	<script language="JavaScript">
-		Webcam.set({
-			width: 640,
-			height: 480,
-			image_format: 'jpeg',
-			jpeg_quality: 90
-		});
-	</script>
-	
-	<!-- A button for taking snaps -->
-	<form>
-		<input type="button" value="Cam1" onClick="setup1(); $(this).hide().next().show();">
-		<input type="button" value="Take 1" onClick="take_snapshot1()" style="display:none">
-	</form>
-	
-	<!-- Code to handle taking the snapshot and displaying it locally -->
-	<script language="JavaScript">
-		function setup1() {
-			Webcam.reset();
-			Webcam.attach( '#my_camera1' );
-		}
-		
-		function take_snapshot1() {
-			// take snapshot and get image data
-			Webcam.snap( function(data_uri) {
-				// display results in page
-				document.getElementById('results1').innerHTML = 
-					'<h2>Image 1</h2>' + 
-					'<img src="'+data_uri+'"/>';
-			} );
-		}
-	</script>
-		<!-- ROOM 2-->
-			<form>
-		<input type="button" value="Cam2" onClick="setup2(); $(this).hide().next().show();">
-		<input type="button" value="Take 2" onClick="take_snapshot2()" style="display:none">
-	</form>
-	<script language="JavaScript">
-		function setup2() {
-			Webcam.reset();
-			Webcam.attach( '#my_camera2' );
-		}
-		
-		function take_snapshot2() {
-			// take snapshot and get image data
-			Webcam.snap( function(data_uri) {
-				// display results in page
-				document.getElementById('results2').innerHTML = 
-					'<h2>Image 2</h2>' + 
-					'<img src="'+data_uri+'"/>';
-			} );
-		}
-	</script>
-	
+    <h1>HD Capture</h1>
+    <h3>Will only work if camera supports HD</h3>
+    <form>
+        <input type=button value="Take HD Snapshot" onClick="take_snapshot()">
+    </form>
+    <div id="my_camera"></div>
+    <!-- First, include the Webcam.js JavaScript Library -->
+    <script type="text/javascript" src="webcam.min.js"></script>
+    <!-- Configure a few settings and attach camera -->
+    <script language="JavaScript">
+    Webcam.set({
+        width: 1280,
+        height: 720,
+        image_format: 'jpeg',
+        jpeg_quality: 100,
+        constraints: {
+            width: { exact: 1280 },
+            height: { exact: 720 }
+        }
+    });
+    Webcam.attach('#my_camera');
+
+    </script>
+    <!-- A button for taking snaps -->
+    
+    <!-- Code to handle taking the snapshot and displaying it locally -->
+    <script language="JavaScript">
+    function take_snapshot() {
+        // take snapshot and get image data
+        Webcam.snap(function(data_uri) {
+            // display results in page
+            document.getElementById('results').innerHTML =
+                '<h2>Here is your large image:</h2>' +
+                '<img src="' + data_uri + '"/>';
+        });
+        document.getElementById('my_camera').style.display = "none";
+    }
+    </script>
+    <div id="results">Your captured image will appear here...</div>
+    <div id="overlay">OVERLAY TEST</div>
 </body>
+
 </html>

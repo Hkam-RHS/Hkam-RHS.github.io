@@ -1,4 +1,9 @@
 
+body {
+    background-image: url("trolley.jpg");
+    background-size: cover;
+}
+
 input, select {
     width: 60%;
     border-radius: 2px;
@@ -9,13 +14,12 @@ input, select {
     color: white;
 }
 
-button {
+button, #snapButton1, #snapButton2, #snapButton3, #snapButton4, #snapButton5 {
     background-color: #960038;
     font-family: 'Raleway', sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
     color: white;
-    border-radius: 2px;
     border:0px;
 }
 
@@ -23,6 +27,7 @@ button {
 .container {
   margin-top: 50px;
 }
+
 
 #video-background {
     position: fixed;
