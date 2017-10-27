@@ -39,9 +39,9 @@
                 button.addEventListener ("click", function() {
                     document.getElementById('room1photo').innerHTML = "";
                     });
-                };
+                });
                 document.getElementById('room1cam').style.display = "none"
-            });
+            };
         }
         </script>
         <div id="room1cam"></div>
@@ -52,7 +52,7 @@
             width: 240,
             height: 160,
             image_format: 'jpeg',
-            jpeg_quality: 90
+            jpeg_quality: 100
         });
         Webcam.attach('#room1cam');
         </script>
