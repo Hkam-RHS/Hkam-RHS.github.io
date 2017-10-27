@@ -160,6 +160,7 @@
      document.getElementById('fullRoom2').innerHTML = "";
      document.getElementById('roomTwoGuest').style.display = "block";
      document.getElementById('guest2Label').style.display = "block";
+     document.getElementById('room2cam').style.display = "block"
      document.getElementById('guest2Label').innerHTML = "Guest Name";
      document.getElementById('room2').style.backgroundColor = "rgb(241, 254, 198)";
  }
