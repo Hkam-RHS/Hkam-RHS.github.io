@@ -33,16 +33,7 @@
             Webcam.snap(function(data_uri) {
                 // display results in page
                 document.getElementById('room1photo').innerHTML = '<img src="' + data_uri + '"/>';
-                var button = document.createElement("button");
-                button.innerHTML = "Clear Photo";
-                room1photo.appendChild(button);
-                button.addEventListener ("click", function() {
-                    document.getElementById('room1photo').innerHTML = "";
-                    });
-                });
-                document.getElementById('room1cam').style.display = "none"
-            };
-        }
+        });
         </script>
         <div id="room1cam"></div>
         <div id="room1photo">Photo of primary guest. Person is responsible until all guests are cleared.</div>
