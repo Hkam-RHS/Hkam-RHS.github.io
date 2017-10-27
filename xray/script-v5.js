@@ -104,8 +104,6 @@
      document.getElementById('fullRoom1').innerHTML = "";
      document.getElementById('roomOneGuest').style.display = "block";
      document.getElementById('guest1Label').style.display = "block";
-     document.getElementById('room1cam').style.display = "block";
-     document.getElementById('room1photo').innerHTML = "";
      document.getElementById('guest1Label').innerHTML = "Guest Name";
      document.getElementById('room1').style.backgroundColor = "rgb(241, 254, 198)";
  }
@@ -164,8 +162,6 @@
      document.getElementById('fullRoom2').innerHTML = "";
      document.getElementById('roomTwoGuest').style.display = "block";
      document.getElementById('guest2Label').style.display = "block";
-     document.getElementById('room2cam').style.display = "block";
-     document.getElementById('room2photo').innerHTML = "";
      document.getElementById('guest2Label').innerHTML = "Guest Name";
      document.getElementById('room2').style.backgroundColor = "rgb(241, 254, 198)";
  }
