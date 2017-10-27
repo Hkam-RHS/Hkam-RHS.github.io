@@ -25,19 +25,20 @@
         <ol id="r1List"></ol>
         <button onclick="remove1All();">Clear Room</button>
         <!--Button takes picture-->
-        <input type=button value="Take Snapshot" onClick="take_snapshot()">
+        <input type=button value="Take Snapshot" onClick="take_snapsho1t()">
         <!-- Code to handle taking the snapshot and displaying it locally -->
         <script language="JavaScript">
-        function take_snapshot() {
+        function take_snapshot1() {
             // take snapshot and get image data
             Webcam.snap(function(data_uri) {
                 // display results in page
-                document.getElementById('results').innerHTML = '<img src="' + data_uri + '"/>';
+                document.getElementById('room1photo').innerHTML = '<img src="' + data_uri + '"/>';
+                document.getElementById('room1cam').style.display = "none"
             });
         }
         </script>
-        <div id="my_camera"></div>
-        <div id="results">Photo of Main person responsible</div>
+        <div id="room1cam"></div>
+        <div id="room1photo">Photo of primary guest. Person is responsible until all guests are cleared.</div>
         <!--Set WebCam-->
         <script language="JavaScript">
         Webcam.set({
@@ -46,7 +47,7 @@
             image_format: 'jpeg',
             jpeg_quality: 90
         });
-        Webcam.attach('#my_camera');
+        Webcam.attach('#room1cam');
         </script>
         </div>
 

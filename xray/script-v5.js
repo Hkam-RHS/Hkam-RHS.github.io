@@ -1,5 +1,5 @@
  ///////////////////////////WHATS NEW IN VERSION 4 /////////////////////////////
- // 1. Clickable LI elements to check someone out.
+ // Camera feature
 
  var dt = new Date();
  var utcDate = dt.toDateString();
@@ -68,7 +68,7 @@
          ol.appendChild(li);
          document.getElementById('roomOneGuest').value = "";
          peeps1++;
-         
+
          //Removes list item on click
          li.onclick = function() {
              this.parentNode.removeChild(this);
@@ -103,6 +103,7 @@
      document.getElementById('fullRoom1').innerHTML = "";
      document.getElementById('roomOneGuest').style.display = "block";
      document.getElementById('guest1Label').style.display = "block";
+     document.getElementById('room1cam').style.display = "block"
      document.getElementById('guest1Label').innerHTML = "Guest Name";
      document.getElementById('room1').style.backgroundColor = "rgb(241, 254, 198)";
  }
