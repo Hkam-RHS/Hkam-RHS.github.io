@@ -12,57 +12,44 @@
 
 <body>
     <div class="container">
-    <!--ROOM 1-->
-    <div id="room1">
-        <span class="roomNumber">Room 1</span>
-        <br>
-        <h2 id="fullRoom1"></h2>
-        <p id="guest1Label">Guest Name</p>
-        <input type="text" id="roomOneGuest" onkeypress="add1(event)">
-        <br>
-        <p id="remove1">Click guest to remove:</p>
-        <ol id="r1List"></ol>
-        <button onclick="remove1All();">Clear Room</button>
-               <!--Button takes picture-->
-        <input type=button value="Take Snapshot" onClick="take_snapshot1()">
-       <!-- Code to handle taking the snapshot and displaying it locally -->
-    <script language="JavaScript">
-        function take_snapshot1() {
-            // take snapshot and get image data
-            Webcam.snap( function(data_uri) {
-                // display results in page
-                document.getElementById('room1photo').innerHTML = '<img src="'+data_uri+'"/>';
-                document.getElementById('room1cam').style.display = "none";
-            } );
-        }
-    </script>
-        <div id="room1cam"></div>
-        <p>Photo of primary guest. Person is responsible until all guests are cleared.</p>
-        <div id="room1photo"></div>
-        <input type=button value="Clear Snapshot" onClick="clearPhoto1()">
-
-        <!--Set WebCam-->
-        <script language="JavaScript">
-        Webcam.set({
-            width: 240,
-            height: 160,
-            image_format: 'jpeg',
-            jpeg_quality: 100
-        });
-        Webcam.attach('#room1cam');
-        </script>
+        <!--ROOM 1-->
+        <div id="room1">
+            <span class="roomNumber">Room 1</span>
+            <br>
+            <h2 id="fullRoom1"></h2>
+            <p id="guest1Label">Guest Name</p>
+            <input type="text" id="roomOneGuest" onkeypress="add1(event)">
+            <br>
+            <p id="remove1">Click guest to remove:</p>
+            <ol id="r1List"></ol>
+            <button onclick="remove1All();">Clear Room</button>
+            <!--Button takes picture-->
+            <input type=button value="Take Snapshot" onClick="take_snapshot1()">
+            <!-- Code to handle taking the snapshot and displaying it locally -->
+            <script language="JavaScript">
+            function take_snapshot1() {
+                // take snapshot and get image data
+                Webcam.snap(function(data_uri) {
+                    // display results in page
+                    document.getElementById('room1photo').innerHTML = '<img src="' + data_uri + '"/>';
+                    document.getElementById('room1cam').style.display = "none";
+                });
+            }
+            </script>
+            <div id="room1cam"></div>
+            <p>Photo of primary guest. Person is responsible until all guests are cleared.</p>
+            <div id="room1photo"></div>
+            <!--Set WebCam-->
+            <script language="JavaScript">
+            Webcam.set({
+                width: 240,
+                height: 160,
+                image_format: 'jpeg',
+                jpeg_quality: 100
+            });
+            Webcam.attach('#room1cam');
+            </script>
         </div>
-
-
-
-
-
-
-
-
-
-
-
         <!--ROOM 2-->
         <div id="room2">
             <span class="roomNumber">Room 2</span>
@@ -74,47 +61,33 @@
             <p id="remove2">Click guest to remove:</p>
             <ol id="r2List"></ol>
             <button onclick="remove2All();">Clear Room</button>
-             <!--Button takes picture-->
-        <input type=button value="Take Snapshot" onClick="take_snapshot2()">
-       <!-- Code to handle taking the snapshot and displaying it locally -->
-    <script language="JavaScript">
-        function take_snapshot2() {
-            // take snapshot and get image data
-            Webcam.snap( function(data_uri) {
-                // display results in page
-                document.getElementById('room2photo').innerHTML = '<img src="'+data_uri+'"/>';
-                document.getElementById('room2cam').style.display = "none";
-            } );
-        }
-    </script>
-        <div id="room2cam"></div>
-        <p>Photo of primary guest. Person is responsible until all guests are cleared.</p>
-        <div id="room2photo"></div>
-         
-        <!--Set WebCam-->
-        <script language="JavaScript">
-        Webcam.set({
-            width: 240,
-            height: 160,
-            image_format: 'jpeg',
-            jpeg_quality: 100
-        });
-        Webcam.attach('#room2cam');
-        </script>
+            <!--Button takes picture-->
+            <input type=button value="Take Snapshot" onClick="take_snapshot2()">
+            <!-- Code to handle taking the snapshot and displaying it locally -->
+            <script language="JavaScript">
+            function take_snapshot2() {
+                // take snapshot and get image data
+                Webcam.snap(function(data_uri) {
+                    // display results in page
+                    document.getElementById('room2photo').innerHTML = '<img src="' + data_uri + '"/>';
+                    document.getElementById('room2cam').style.display = "none";
+                });
+            }
+            </script>
+            <div id="room2cam"></div>
+            <p>Photo of primary guest. Person is responsible until all guests are cleared.</p>
+            <div id="room2photo"></div>
+            <!--Set WebCam-->
+            <script language="JavaScript">
+            Webcam.set({
+                width: 240,
+                height: 160,
+                image_format: 'jpeg',
+                jpeg_quality: 100
+            });
+            Webcam.attach('#room2cam');
+            </script>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
         <!--ROOM 3-->
         <div id="room3">
             <span class="roomNumber">Room 3</span>
@@ -126,6 +99,32 @@
             <p id="remove3">Click guest to remove:</p>
             <ol id="r3List"></ol>
             <button onclick="remove3All();">Clear Room</button>
+            <!--Button takes picture-->
+            <input type=button value="Take Snapshot" onClick="take_snapshot3()">
+            <!-- Code to handle taking the snapshot and displaying it locally -->
+            <script language="JavaScript">
+            function take_snapshot3() {
+                // take snapshot and get image data
+                Webcam.snap(function(data_uri) {
+                    // display results in page
+                    document.getElementById('room3photo').innerHTML = '<img src="' + data_uri + '"/>';
+                    document.getElementById('room3cam').style.display = "none";
+                });
+            }
+            </script>
+            <div id="room3cam"></div>
+            <p>Photo of primary guest. Person is responsible until all guests are cleared.</p>
+            <div id="room3photo"></div>
+            <!--Set WebCam-->
+            <script language="JavaScript">
+            Webcam.set({
+                width: 240,
+                height: 160,
+                image_format: 'jpeg',
+                jpeg_quality: 100
+            });
+            Webcam.attach('#room3cam');
+            </script>
         </div>
         <!--ROOM 4-->
         <div id="room4">
@@ -138,6 +137,32 @@
             <p id="remove4">Click guest to remove:</p>
             <ol id="r4List"></ol>
             <button onclick="remove4All();">Clear Room</button>
+            <!--Button takes picture-->
+            <input type=button value="Take Snapshot" onClick="take_snapshot4()">
+            <!-- Code to handle taking the snapshot and displaying it locally -->
+            <script language="JavaScript">
+            function take_snapshot4() {
+                // take snapshot and get image data
+                Webcam.snap(function(data_uri) {
+                    // display results in page
+                    document.getElementById('room4photo').innerHTML = '<img src="' + data_uri + '"/>';
+                    document.getElementById('room4cam').style.display = "none";
+                });
+            }
+            </script>
+            <div id="room4cam"></div>
+            <p>Photo of primary guest. Person is responsible until all guests are cleared.</p>
+            <div id="room4photo"></div>
+            <!--Set WebCam-->
+            <script language="JavaScript">
+            Webcam.set({
+                width: 240,
+                height: 160,
+                image_format: 'jpeg',
+                jpeg_quality: 100
+            });
+            Webcam.attach('#room4cam');
+            </script>
         </div>
         <!--ROOM 5-->
         <div id="room5">
@@ -150,10 +175,33 @@
             <p id="remove5">Click guest to remove:</p>
             <ol id="r5List"></ol>
             <button onclick="remove5All();">Clear Room</button>
+            <!--Button takes picture-->
+            <input type=button value="Take Snapshot" onClick="take_snapshot5()">
+            <!-- Code to handle taking the snapshot and displaying it locally -->
+            <script language="JavaScript">
+            function take_snapshot5() {
+                // take snapshot and get image data
+                Webcam.snap(function(data_uri) {
+                    // display results in page
+                    document.getElementById('room5photo').innerHTML = '<img src="' + data_uri + '"/>';
+                    document.getElementById('room5cam').style.display = "none";
+                });
+            }
+            </script>
+            <div id="room5cam"></div>
+            <p>Photo of primary guest. Person is responsible until all guests are cleared.</p>
+            <div id="room5photo"></div>
+            <!--Set WebCam-->
+            <script language="JavaScript">
+            Webcam.set({
+                width: 240,
+                height: 160,
+                image_format: 'jpeg',
+                jpeg_quality: 100
+            });
+            Webcam.attach('#room5cam');
+            </script>
         </div>
-    </div>
-    <div id="footerLogo">
-        <img src="logoTrans2a.png" height="100%">
     </div>
 </body>
 

@@ -1,6 +1,6 @@
 
 input, select {
-    width: 90%;
+    width: 60%;
     border-radius: 2px;
     border:0px;
     background-color: #74A4BC;
@@ -21,7 +21,7 @@ button {
 
 
 .container {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 #video-background {
@@ -48,9 +48,9 @@ button {
 
 #room1, #room2, #room3, #room4, #room5 {
     float: left;
-    margin: 2px;
-    padding: 5px;
-    max-width: 20%;
+    margin: 1px;
+    padding: 1px;
+    max-width: 15%;
     background: rgb(241, 254, 198);
     color: black;
     font-family: 'Raleway', sans-serif;

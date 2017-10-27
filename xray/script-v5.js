@@ -79,7 +79,7 @@
              document.getElementById('guest1Label').style.display = "block";
              document.getElementById('guest1Label').innerHTML = "Guest Name";
              document.getElementById('room1').style.backgroundColor = "rgb(241, 254, 198)";
-         }
+         };
 
          if (peeps1 == 3) {
              document.getElementById('room1').style.backgroundColor = "orange";
@@ -104,12 +104,13 @@
      document.getElementById('fullRoom1').innerHTML = "";
      document.getElementById('roomOneGuest').style.display = "block";
      document.getElementById('guest1Label').style.display = "block";
-     document.getElementById('room1cam').style.display = "block"
+     document.getElementById('room1cam').style.display = "block";
+     document.getElementById('room1photo').innerHTML = "";
      document.getElementById('guest1Label').innerHTML = "Guest Name";
      document.getElementById('room1').style.backgroundColor = "rgb(241, 254, 198)";
  }
 
- 
+
  /////////////////////////////////ROOM TWO/////////////////////////////////
  function add2() {
 
@@ -138,7 +139,7 @@
              document.getElementById('guest2Label').style.display = "block";
              document.getElementById('guest2Label').innerHTML = "Guest Name";
              document.getElementById('room2').style.backgroundColor = "rgb(241, 254, 198)";
-         }
+         };
          if (peeps2 == 3) {
              document.getElementById('room2').style.backgroundColor = "orange";
              document.getElementById('fullRoom2').innerHTML = "Room Full.";
@@ -163,7 +164,8 @@
      document.getElementById('fullRoom2').innerHTML = "";
      document.getElementById('roomTwoGuest').style.display = "block";
      document.getElementById('guest2Label').style.display = "block";
-     document.getElementById('room2cam').style.display = "block"
+     document.getElementById('room2cam').style.display = "block";
+     document.getElementById('room2photo').innerHTML = "";
      document.getElementById('guest2Label').innerHTML = "Guest Name";
      document.getElementById('room2').style.backgroundColor = "rgb(241, 254, 198)";
  }
@@ -195,7 +197,7 @@
              document.getElementById('guest3Label').style.display = "block";
              document.getElementById('guest3Label').innerHTML = "Guest Name";
              document.getElementById('room3').style.backgroundColor = "rgb(241, 254, 198)";
-         }
+         };
          if (peeps3 == 3) {
              document.getElementById('room3').style.backgroundColor = "orange";
              document.getElementById('fullRoom3').innerHTML = "Room Full.";
@@ -223,6 +225,8 @@
      document.getElementById('roomThreeGuest').style.display = "block";
      document.getElementById('guest3Label').style.display = "block";
      document.getElementById('guest3Label').innerHTML = "Guest Name";
+     document.getElementById('room3cam').style.display = "block";
+     document.getElementById('room3photo').innerHTML = "";
      document.getElementById('room3').style.backgroundColor = "rgb(241, 254, 198)";
  }
  /////////////////////////////////ROOM FOUR/////////////////////////////////
@@ -252,7 +256,7 @@
              document.getElementById('guest4Label').style.display = "block";
              document.getElementById('guest4Label').innerHTML = "Guest Name";
              document.getElementById('room4').style.backgroundColor = "rgb(241, 254, 198)";
-         }
+         };
          if (peeps4 == 3) {
              document.getElementById('room4').style.backgroundColor = "orange";
              document.getElementById('fullRoom4').innerHTML = "Room Full.";
@@ -279,6 +283,8 @@
      document.getElementById('roomFourGuest').style.display = "block";
      document.getElementById('guest4Label').style.display = "block";
      document.getElementById('guest4Label').innerHTML = "Guest Name";
+     document.getElementById('room4cam').style.display = "block";
+     document.getElementById('room4photo').innerHTML = "";
      document.getElementById('room4').style.backgroundColor = "rgb(241, 254, 198)";
  }
  /////////////////////////////////ROOM FIVE/////////////////////////////////
@@ -309,7 +315,7 @@
              document.getElementById('guest5Label').style.display = "block";
              document.getElementById('guest5Label').innerHTML = "Guest Name";
              document.getElementById('room5').style.backgroundColor = "rgb(241, 254, 198)";
-         }
+         };
 
          if (peeps5 == 3) {
              document.getElementById('room5').style.backgroundColor = "orange";
@@ -335,5 +341,7 @@
      document.getElementById('roomFiveGuest').style.display = "block";
      document.getElementById('guest5Label').style.display = "block";
      document.getElementById('guest5Label').innerHTML = "Guest Name";
+     document.getElementById('room5cam').style.display = "block";
+     document.getElementById('room5photo').innerHTML = "";
      document.getElementById('room5').style.backgroundColor = "rgb(241, 254, 198)";
  }
