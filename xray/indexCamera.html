@@ -26,11 +26,10 @@
             <button onclick="remove1All();">Clear Room</button>
             <!--Button takes picture-->
             <input type="button" value="Access Camera" onClick="setup1(); $(this).next().show();">
-            <input type=button value="Take Snapshot" onClick="take_snapshot1()" style="display:none">
+            <input type=button value="Take Snapshot" onClick="take_snapshot1()" style="display:none" id="snapButton1">
             <!-- Code to handle taking the snapshot and displaying it locally -->
             <script language="JavaScript">
             function setup1() {
-                Webcam.reset();
                 Webcam.attach('#room1photo');
             }
 
@@ -39,6 +38,7 @@
                 Webcam.snap(function(data_uri) {
                     // display results in page
                     document.getElementById('room1photo').innerHTML = '<img src="' + data_uri + '"/>';
+                    document.getElementById('snapButton1').style.display = "none";
                 });
             }
             </script>
@@ -61,11 +61,10 @@
             <button onclick="remove2All();">Clear Room</button>
             <!--Button takes picture-->
             <input type="button" value="Access Camera" onClick="setup2(); $(this).next().show();">
-            <input type=button value="Take Snapshot" onClick="take_snapshot2()" style="display:none">
-            <!-- Code to handle taking the snapshot and displaying it locally -->
+            <input type=button value="Take Snapshot" onClick="take_snapshot2()" style="display:none" id="snapButton2">
+           <!-- Code to handle taking the snapshot and displaying it locally -->
             <script language="JavaScript">
             function setup2() {
-                Webcam.reset();
                 Webcam.attach('#room2photo');
             }
 
@@ -74,7 +73,7 @@
                 Webcam.snap(function(data_uri) {
                     // display results in page
                     document.getElementById('room2photo').innerHTML = '<img src="' + data_uri + '"/>';
-                    document.getElementById('room2cam').style.display = "none";
+                    document.getElementById('snapButton2').style.display = "none";
                 });
             }
             </script>
@@ -96,11 +95,10 @@
             <button onclick="remove3All();">Clear Room</button>
             <!--Button takes picture-->
             <input type="button" value="Access Camera" onClick="setup3(); $(this).next().show();">
-            <input type=button value="Take Snapshot" onClick="take_snapshot3()" style="display:none">
+            <input type=button value="Take Snapshot" onClick="take_snapshot3()" style="display:none" id="snapButton3">
             <!-- Code to handle taking the snapshot and displaying it locally -->
             <script language="JavaScript">
             function setup3() {
-                Webcam.reset();
                 Webcam.attach('#room3photo');
             }
 
@@ -109,6 +107,7 @@
                 Webcam.snap(function(data_uri) {
                     // display results in page
                     document.getElementById('room3photo').innerHTML = '<img src="' + data_uri + '"/>';
+                    document.getElementById('snapButton3').style.display = "none";
                 });
             }
             </script>
@@ -130,11 +129,10 @@
             <button onclick="remove4All();">Clear Room</button>
             <!--Button takes picture-->
             <input type="button" value="Access Camera" onClick="setup4(); $(this).next().show();">
-            <input type=button value="Take Snapshot" onClick="take_snapshot1()" style="display:none">
+            <input type=button value="Take Snapshot" onClick="take_snapshot4()" style="display:none" id="snapButton4">
             <!-- Code to handle taking the snapshot and displaying it locally -->
             <script language="JavaScript">
             function setup4() {
-                Webcam.reset();
                 Webcam.attach('#room4photo');
             }
 
@@ -143,6 +141,7 @@
                 Webcam.snap(function(data_uri) {
                     // display results in page
                     document.getElementById('room4photo').innerHTML = '<img src="' + data_uri + '"/>';
+                    document.getElementById('snapButton4').style.display = "none";
                 });
             }
             </script>
@@ -165,11 +164,10 @@
             <button onclick="remove5All();">Clear Room</button>
             <!--Button takes picture-->
             <input type="button" value="Access Camera" onClick="setup5(); $(this).next().show();">
-            <input type=button value="Take Snapshot" onClick="take_snapshot5()" style="display:none">
+            <input type=button value="Take Snapshot" onClick="take_snapshot5()" style="display:none" id="snapButton5">
             <!-- Code to handle taking the snapshot and displaying it locally -->
             <script language="JavaScript">
             function setup5() {
-                Webcam.reset();
                 Webcam.attach('#room5photo');
             }
 
@@ -178,6 +176,8 @@
                 Webcam.snap(function(data_uri) {
                     // display results in page
                     document.getElementById('room5photo').innerHTML = '<img src="' + data_uri + '"/>';
+                    document.getElementById('snapButton5').style.display = "none";
+
                 });
             }
             </script>
@@ -189,14 +189,12 @@
     </div>
     <!--Set WebCam for all rooms-->
             <script language="JavaScript">
-            Webcam.set({
-                width: 180,
-                height: 160,
-                crop_width:160,
-                crop_height:120,
-                image_format: 'jpeg',
-                jpeg_quality: 100
-            });
+                Webcam.set({
+            width: 160,
+            height: 120,
+            image_format: 'jpeg',
+            jpeg_quality: 100
+        });
             </script>
 </body>
 
