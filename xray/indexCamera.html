@@ -23,7 +23,7 @@
         <p id="remove1">Click guest to remove:</p>
         <ol id="r1List"></ol>
         <button onclick="remove1All();">Clear Room</button>
-        <!--Button takes picture-->
+               <!--Button takes picture-->
         <input type=button value="Take Snapshot" onClick="take_snapshot1()">
        <!-- Code to handle taking the snapshot and displaying it locally -->
     <script language="JavaScript">
@@ -39,6 +39,8 @@
         <div id="room1cam"></div>
         <p>Photo of primary guest. Person is responsible until all guests are cleared.</p>
         <div id="room1photo"></div>
+        <input type=button value="Clear Snapshot" onClick="clearPhoto1()">
+
         <!--Set WebCam-->
         <script language="JavaScript">
         Webcam.set({
@@ -88,6 +90,7 @@
         <div id="room2cam"></div>
         <p>Photo of primary guest. Person is responsible until all guests are cleared.</p>
         <div id="room2photo"></div>
+         
         <!--Set WebCam-->
         <script language="JavaScript">
         Webcam.set({

@@ -53,6 +53,7 @@
 
  /////////////////////////////////ROOM ONE/////////////////////////////////
  function add1(event) {
+
      if ((peeps1 < 3) && (window.event.keyCode == 13)) {
          var r1Name = document.getElementById('roomOneGuest').value;
          var ol = document.getElementById("r1List");
@@ -103,11 +104,12 @@
      document.getElementById('fullRoom1').innerHTML = "";
      document.getElementById('roomOneGuest').style.display = "block";
      document.getElementById('guest1Label').style.display = "block";
-     document.getElementById('room1cam').style.display = "block";
-     document.getElementById('room1photo').style.display = "none"
+     document.getElementById('room1cam').style.display = "block"
      document.getElementById('guest1Label').innerHTML = "Guest Name";
      document.getElementById('room1').style.backgroundColor = "rgb(241, 254, 198)";
  }
+
+ 
  /////////////////////////////////ROOM TWO/////////////////////////////////
  function add2() {
 
