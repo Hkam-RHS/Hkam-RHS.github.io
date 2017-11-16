@@ -1,0 +1,1 @@
+If you are reading this, then the test worked and your AJAX code works.
