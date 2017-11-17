@@ -3,7 +3,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-/*function getAJAX() {
+function getAJAX() {
  var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -12,15 +12,15 @@
   };
   xhttp.open("GET", "sample.txt", true);
   xhttp.send();
-}*/
+}
 </script>
 
 <script>
-$(document).ready(function(){
+/*$(document).ready(function(){
     $("button").click(function(){
         $("#demo").load("sample.txt");
     });
-});
+});*/
 </script>
 <style>
 
@@ -34,7 +34,7 @@ h1 {
 
 <body>
 
- <button>
+ <button onclick="getAJAX()">
  Update page
  </button>
 <span id="demo"></span>
