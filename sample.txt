@@ -1,2 +1,5 @@
 <h1>Lemon lime header</h1>
 <p>If you can read this, then the css has overrided the default txt file and the jQuery script is working</p>
+
+<div id="leftBox">This is the left box</div>
+<div id="rightBox">This is the right box</div>
