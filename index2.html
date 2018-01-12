@@ -121,7 +121,18 @@ function create() {
 
     game.input.onDown.add(gofull, this);
 }
+function gofull() {
 
+    if (game.scale.isFullScreen)
+    {
+        game.scale.stopFullScreen();
+    }
+    else
+    {
+        game.scale.startFullScreen(false);
+    }
+
+}
 function update() {
 
     //  Collide the player and the stars with the platforms
