@@ -7,7 +7,6 @@
     <style type="text/css">
         body {
             margin: 0;
-            background-color: black;
         }
     </style>
 </head>
@@ -35,7 +34,7 @@ var loser;
 var intro;
 
 function create() {
-game.stage.backgroundColor = "#000000";
+
     simon = game.add.group();
     var item;
 
@@ -67,11 +66,10 @@ game.stage.backgroundColor = "#000000";
     setUp();
     setTimeout(function(){simonSequence(); intro = false;}, 6000);
 
-    //Make game full screen...Does not work because
+    //Make game full screen
 
     game.scale.fullScreenScaleMode = Phaser.ScaleManager.SHOW_ALL;
-    fullkey = game.input.keyboard.addKey(Phaser.Keyboard.F);
-    fullkey.onDown.add(gofull, this);
+    game.input.onDown.add(gofull, this);
 
     function gofull() {
         if (game.scale.isFullScreen) {
