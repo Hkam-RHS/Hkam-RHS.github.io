@@ -12,6 +12,55 @@
     }
     </style>
 </head>
+<<<<<<< HEAD
+=======
+<body>
+
+<script type="text/javascript">
+var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-example', { preload: preload, create: create, update: update, render: render });
+
+function preload() {
+
+    game.load.spritesheet('item', 'assets/number-buttons.png', 160, 160);
+}
+
+var simon;
+var N = 1;
+var userCount = 0;
+var currentCount = 0;
+var sequenceCount = 16;
+var sequenceList = [];
+var simonSez = false;
+var timeCheck;
+var litSquare;
+var winner;
+var loser;
+var intro;
+
+this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+//this.scale.pageAlignHorizontally = true;
+this.scale.pageAlignVertically = true;
+this.scale.setScreenSize( true );
+
+
+
+function create() {
+game.stage.backgroundColor = "#000000";
+    simon = game.add.group();
+    var item;
+
+    for (var i = 0; i < 3; i++)
+    {
+        item = simon.create(150 + 168 * i, 150, 'item', i);
+        // Enable input.
+        item.inputEnabled = true;
+        item.input.start(0, true);
+        item.events.onInputDown.add(select);
+        item.events.onInputUp.add(release);
+        item.events.onInputOut.add(moveOff);
+        simon.getAt(i).alpha = 0;
+    }
+>>>>>>> 8dbe655143f405b4b8f9b385f456c7a28a1edc9a
 
 <body>
     <script type="text/javascript">
