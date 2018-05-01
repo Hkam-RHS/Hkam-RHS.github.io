@@ -16,6 +16,7 @@
     <script>
     var vh = window.innerHeight;
     var vw = window.innerWidth;
+    var fence;
 
  // must be in HTTPS
 function setup() {
@@ -24,9 +25,11 @@ function setup() {
       noStroke();
     // get position once
     if (!navigator.geolocation) {
-      alert("navigator.geolocation is not available");
+      alert("geolocation is required");
     }
     navigator.geolocation.getCurrentPosition(setPos);
+    fence = new geoFenceCircle(21.311809, -157.838406, 0.10, insideTheFence, outsideTheFence, 'mi');
+    console.log("You must be by Mr. Kam's class");
   }
   
   function setPos(position) {
@@ -37,6 +40,18 @@ function setup() {
     textSize(32);
     text("Current position: " + nf(lat,2,2) + " " + nf(lng,2,2), 10, height/2);
   }
+
+  function insideTheFence(position){
+    console.log("INlat: " + position.latitude);
+    console.log("INlong: " + position.longitude);
+    console.log("user is inside of the fence")
+}
+
+function outsideTheFence(position){
+    console.log("OUTlat: " + position.latitude);
+    console.log("OUTlong: " + position.longitude);
+    console.log("user is outside of the fence")
+}
     </script>
 </body>
 
