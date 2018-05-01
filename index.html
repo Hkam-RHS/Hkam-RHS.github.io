@@ -14,52 +14,27 @@
 
 <body>
     <script>
-var _lat = 0;
-var _lon = 0;
-var previousD = 0;
-
-var targetLat = 34.4;
-var targetLon = -118.0;
-
+// must be in HTTPS
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  if (geoCheck() === false) { 
-    alert("geolocation is not supported on this device");
-  } else {
-		intervalCurrentPosition(positionUpdated, 1000);
+  console.log('starting');
+	noStroke();
+  // get position once
+  if (!navigator.geolocation) {
+    alert("navigator.geolocation is not available");
   }
-  textAlign(CENTER);
-  textSize(windowWidth*0.1);
+  navigator.geolocation.getCurrentPosition(setPos);
 }
 
-
-
-function draw() {
-  background(0, 255, 0);
-	text("LAT\n"+_lat, width/2, 0.33*height);
-	text("LON\n"+_lon, width/2, 0.66*height);
-  
-  var d = dist(_lat, _lon, targetLat, targetLon);
-  print(d);
-  
-  if (d - previousD > 0) {
-    // colder 
-  } else {
-    // hotter 
-  }
-  previousD = d;
-  
-  //var b = map(d, 0, 1, 0, 255);
-  //background(b);
-  
-
+function setPos(position) {
+  var lat = position.coords.latitude;
+  var lng = position.coords.longitude;
+  background(0);
+  fill(255);
+  textSize(32);
+  text("Current position: " + nf(lat,2,2) + " " + nf(lng,2,2), 10, height/2);
 }
 
-
-function positionUpdated(position) {
-  _lat = nfc(position.latitude, 8);
-  _lon = nfc(position.longitude, 8);
-}
     </script>
 </body>
 
