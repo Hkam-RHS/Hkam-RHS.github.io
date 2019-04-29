@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Geolocation test</title>
+    <script src="p5/p5.min.js"></script>
+    <script src="p5/p5.geolocation.js"></script>
+</head>
+
+<body>
+    <script>
+        var fence;
+        var polygon = [{
+                lat: 21.312016,
+                lon: -157.838460
+            },
+            {
+                lat: 21.312036,
+                lon: -157.838369
+            },
+            {
+                lat: 21.311851,
+                lon: -157.838257
+            },
+            {
+                lat: 21.311806,
+                lon: -157.838380
+            }
+        ]
+
+        function setup() {
+            if (geoCheck() == true) {
+                console.log("Geolocation is true");
+            } else {
+                console.log("Not available");
+            }
+            fence = new geoFencePolygon(polygon, insideTheFence, outsideTheFence, 'mi');
+            fenceOptions = {
+                enableHighAccuracy: true,
+                timeout: 2000
+            }
+        }
+
+        function insideTheFence(position) {
+            //console.log("INlat: " + position.latitude);
+            //console.log("INlong: " + position.longitude);
+            //console.log("user is inside of the fence")
+            document.body.style.backgroundColor = "green";
+        }
+
+        function outsideTheFence(position) {
+            //console.log("OUTlat: " + position.latitude);
+            //console.log("OUTlong: " + position.longitude);
+            //console.log("user is outside of the fence")
+            document.body.style.backgroundColor = "red";
+        }
+    </script>
+</body>
+
+</html>
